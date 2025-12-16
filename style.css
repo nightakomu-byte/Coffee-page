@@ -1,0 +1,217 @@
+/* --------------------------------------------------------------
+IMPORT FONTS
+-------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap');
+
+/* --------------------------------------------------------------
+ROOT VARIABLES
+-------------------------------------------------------------- */
+:root {
+    --primary-color: #4e342e; /* Rich Espresso Brown */
+    --secondary-color: #d7a86e; /* Latte Beige Accent */
+    --light-color: #faf3e0; /* Creamy Background */
+    --dark-color: #3e2723; /* Dark Roast Text */
+    --border: .1rem solid rgba(78, 52, 46, .3); /* Subtle espresso border */
+}
+
+/* --------------------------------------------------------------
+GLOBAL RESET
+-------------------------------------------------------------- */
+* {
+    font-family: 'Kantumruy Pro', sans-serif; /* Khmer-friendly font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+.heading {
+    text-align: center;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    font-family: 'Kantumruy Pro', sans-serif; /* Khmer font for headings */
+    letter-spacing: .2rem;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light-color);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+/* --------------------------------------------------------------
+HEADINGS
+-------------------------------------------------------------- */
+.heading {
+    text-align: center;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    font-family: 'Pacifico', cursive; /* Café-style handwritten accent */
+    letter-spacing: .2rem;
+}
+
+.heading span {
+    color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------
+BUTTONS
+-------------------------------------------------------------- */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 2rem; /* Rounded like a coffee bean */
+    box-shadow: 0 .3rem .6rem rgba(0,0,0,.2);
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------
+HEADER
+-------------------------------------------------------------- */
+.header {
+    background: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: .2rem solid var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.header .logo {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header .logo span {
+    color: var(--secondary-color);
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: var(--secondary-color);
+    border-bottom: .2rem solid var(--secondary-color);
+    padding-bottom: .5rem;
+}
+
+.header #menu-btn {
+    color: var(--dark-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: none;
+}
+
+/* --------------------------------------------------------------
+HOME SECTION
+-------------------------------------------------------------- */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('images/cafe_interior.jpg') no-repeat center/cover;
+    padding-top: 10rem;
+}
+
+.home .content {
+    max-width: 60rem;
+    background: rgba(250, 243, 224, 0.9); /* Creamy overlay */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------
+MENU & PRODUCTS SECTION
+-------------------------------------------------------------- */
+.menu .box-container,
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box,
+.products .box-container .box {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--light-color);
+    border-radius: 1rem;
+    border: .1rem solid var(--secondary-color);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    transition: transform .3s ease;
+}
+
+.menu .box-container .box:hover,
+.products .box-container .box:hover {
+    transform: translateY(-.5rem);
+    box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.15);
+}
+
+.menu .box-container .box img,
+.products .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+    font-weight: 600;
+}
